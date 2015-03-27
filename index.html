@@ -29,7 +29,12 @@
 <script id="editable">
 	var displayMessage;		// the HTML element we use to display messages to the user
         var displayErr;
-	function init() {
+        
+        function init(){
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        
+	function onDeviceReady() {
 		// store this off because walking the DOM to get the reference is expensive
 		displayMessage = document.getElementById("status");
                 displayErr = document.getElementById("errorMsg");
