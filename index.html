@@ -76,11 +76,12 @@
 //                                        document.getElementById("errorMsg").innerHTML ="Sorry, SoundJS is not currently supported in your browser.";
 //					return;
 //				}
-                                //createjs.Sound.registerPlugins([createjs.CordovaAudioPlugin]);
+                                this.displayStatus.innerHTML = "Cordova. Waiting for load to complete.";  // let the user know what's happening
+                                createjs.Sound.registerPlugins([createjs.CordovaAudioPlugin]);
 				// Create a single item to load.
 				var assetsPath = "assets/audio/";
 				this.src = assetsPath + "bgMusic.mp3";  //    "bgMusic.mp3";
-				this.displayStatus.innerHTML = "Cordova. Waiting for load to complete.";  // let the user know what's happening
+				
 				// NOTE createjs.proxy is used to apply scope so we stay within the touch scope, allowing sound to play on mobile devices
 				this.loadProxy = createjs.proxy(this.handleLoad, this);
 				createjs.Sound.alternateExtensions = ["ogg"];	// add other extensions to try loading if the src file extension is not supported
