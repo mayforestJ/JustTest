@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git"
     xmlns:gap   = "http://phonegap.com/ns/1.0"  
-    id          = "com.phonegap.example"
+    id          = "org.apache.cordova.media"
     versionCode = "10"
     version     = "1.0.0" >
 
@@ -14,5 +14,5 @@
     </description>
 
     <!-- We'll include the codova media plugin as an example -->
-    <gap:plugin name="com.phonegap.plugins.example" source="plugins.cordova.io" />
+    <gap:plugin name="org.apache.cordova.media" source="plugins.cordova.io" />
 </widget>
