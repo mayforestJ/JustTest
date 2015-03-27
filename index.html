@@ -76,6 +76,7 @@
                                         document.getElementById("errorMsg").innerHTML ="Sorry, SoundJS is not currently supported in your browser.";
 					return;
 				}
+                                createjs.Sound.registerPlugins([createjs.CordovaAudioPlugin]);
 				// Create a single item to load.
 				var assetsPath = "assets/audio/";
 				this.src = assetsPath + "bgMusic.mp3";  //    "bgMusic.mp3";
